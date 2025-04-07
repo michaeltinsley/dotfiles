@@ -13,7 +13,7 @@ cd ~/  # Change to the users home directory
 gh repo clone michaltinsley/dotfiles  # Clone the repo - I like to use the GH CLI but 🤷
 ```
 
-Then create the symoblic link for any apps you want. E.g.
+Then create the symbolic link for any apps you want. E.g.
 
 ```bash
 stow ghostty
