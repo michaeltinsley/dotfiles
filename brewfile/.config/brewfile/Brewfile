@@ -109,6 +109,7 @@ cask todoist
 cask tor-browser
 cask transmission
 cask whatsapp
+cask zed
 
 tap homebrew/bundle
 
