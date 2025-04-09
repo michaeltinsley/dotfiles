@@ -2,9 +2,11 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew bash
 brew bat
 brew ca-certificates
 brew cairo
+brew direnv
 brew fish
 brew fontconfig
 brew freetype
