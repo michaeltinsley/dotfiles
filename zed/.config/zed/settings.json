@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-3.5-turbo"
+    },
+    "version": "2"
+  },
   "base_keymap": "JetBrains",
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 14,
@@ -22,7 +29,9 @@
     "docker-compose": true,
     "terraform": true,
     "toml": true,
-    "material-icon-theme": true
+    "material-icon-theme": true,
+    "basedpyright": true,
+    "ruff": true
   },
   "autosave": {
     "after_delay": {
@@ -33,5 +42,24 @@
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font Mono",
     "blinking": "off"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
   }
 }
