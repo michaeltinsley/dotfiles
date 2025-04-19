@@ -16,6 +16,7 @@
     "enabled_in_assistant": false
   },
   "assistant": {
+    "default_profile": "ask",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
