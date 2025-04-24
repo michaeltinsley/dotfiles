@@ -99,6 +99,7 @@ cask mactex
 cask notion
 cask notion-calendar
 cask nvidia-geforce-now
+cask obsidian
 cask raycast
 cask spotify
 cask tailscale
