@@ -13,13 +13,13 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
-  "assistant": {
-    "default_profile": "ask",
+  "agent": {
+    "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
@@ -48,9 +48,14 @@
       "milliseconds": 1000
     }
   },
-  "load_direnv": "direct",
+  "load_direnv": "shell_hook",
   "terminal": {
-    "blinking": "off"
+    "blinking": "off",
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish"
+      }
+    }
   },
   "languages": {
     "Python": {
@@ -97,5 +102,11 @@
   "journal": {
     "path": "~/GitHub",
     "hour_format": "hour24"
+  },
+  "minimap": {
+    "show": "auto",
+    "current_line_highlight": "all",
+    "thumb": "always",
+    "thumb_border": "full"
   }
 }
