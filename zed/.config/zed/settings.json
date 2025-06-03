@@ -16,10 +16,10 @@
     "enabled_in_text_threads": false
   },
   "agent": {
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking-latest"
     },
     "version": "2"
   },
