@@ -7,6 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "terraform-mcp": {
+      "source": "custom",
+      "enabled": false,
+      "command": "podman",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "hashicorp/terraform-mcp-server"
+      ],
+      "env": {}
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "edit_predictions": {
     "mode": "subtle",
     "copilot": {
@@ -16,12 +33,17 @@
     "enabled_in_text_threads": false
   },
   "agent": {
-    "default_profile": "ask",
+    "use_modifier_to_send": true,
+    "always_allow_tool_actions": true,
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking"
+    },
+    "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking-latest"
+      "model": "claude-opus-4-1-thinking"
     },
-    "version": "2"
   },
   "base_keymap": "JetBrains",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -48,8 +70,9 @@
       "milliseconds": 1000
     }
   },
-  "load_direnv": "shell_hook",
+  "load_direnv": "direct",
   "terminal": {
+    "dock": "bottom",
     "blinking": "off",
     "detect_venv": {
       "on": {
