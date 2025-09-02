@@ -22,7 +22,7 @@
     }
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "edit_predictions": {
     "mode": "subtle",
@@ -41,8 +41,8 @@
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-opus-4-1-thinking"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     },
   },
   "base_keymap": "JetBrains",
