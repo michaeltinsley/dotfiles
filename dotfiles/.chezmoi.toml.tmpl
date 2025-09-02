@@ -1,0 +1,15 @@
+{{- $use_secrets := promptBoolOnce . "use_secrets" "Use secrets from 1Password? (true/false)" -}}
+{{- $personal_computer := promptBoolOnce . "personal_computer" "Is this a personal computer for daily driving? (true/false)" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
+[data]
+    email             = {{ $email | quote }}
+    github_user       = "michaeltinsley"
+    is_ci_workflow    = false # Set true only in CI test
+    personal_computer = {{ $personal_computer }}
+    use_secrets       = {{ $use_secrets }}
+
+[diff]
+    {{ if lookPath "delta" -}}command = "delta"
+    {{ end -}}
+    exclude = ["scripts"]

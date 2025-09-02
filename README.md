@@ -3,18 +3,21 @@
 This repo is my personal dotfiles repository.
 It is pretty basic - I'm happy with the default config for most things!
 
-## Using GNU Stow
+## Using Chezmoi
 
-This repo uses GNU Stow for managing symoblic links.
+This repo now uses [Chezmoi](https://chezmoi.io) to manage dotfiles.
+
+### Installation
+
+First, you need to install Chezmoi. You can find the installation instructions in the [official documentation](https://chezmoi.io/docs/install/).
+
+### Usage
+
+To apply the dotfiles using Chezmoi, you can use the following command:
 
 ```bash
-brew install stow  # Ensure Stow is installed
-cd ~/  # Change to the users home directory
-gh repo clone michaltinsley/dotfiles  # Clone the repo - I like to use the GH CLI but 🤷
+chezmoi init --apply michaeltinsley
 ```
 
-Then create the symbolic link for any apps you want. E.g.
-
-```bash
-stow ghostty
-```
+This will initialize Chezmoi and apply the dotfiles from this repository.
+For more information, please refer to the [Chezmoi documentation](https.chezmoi.io/docs/).
