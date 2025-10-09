@@ -12,12 +12,7 @@
       "source": "custom",
       "enabled": false,
       "command": "podman",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "hashicorp/terraform-mcp-server"
-      ],
+      "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"],
       "env": {}
     }
   },
@@ -41,9 +36,13 @@
     },
     "default_profile": "write",
     "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking"
+    },
+    "commit_message_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
-    },
+    }
   },
   "base_keymap": "JetBrains",
   "buffer_font_family": "JetBrainsMono Nerd Font",
