@@ -1,7 +1,11 @@
 [
   {
     "bindings": {
-      "ctrl-space": "command_palette::Toggle"
+      "ctrl-space": "command_palette::Toggle",
+      "cmd-shift-g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ]
     }
   }
 ]
