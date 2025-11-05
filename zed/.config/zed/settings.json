@@ -7,22 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "context_servers": {
-    "terraform-mcp": {
-      "source": "custom",
-      "enabled": false,
-      "command": "podman",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "hashicorp/terraform-mcp-server"
-      ],
-      "env": {}
-    }
-  },
+  "context_servers": {},
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "edit_predictions": {
     "mode": "subtle",
@@ -33,17 +20,14 @@
     "enabled_in_text_threads": false
   },
   "agent": {
-    "use_modifier_to_send": true,
+    "notify_when_agent_waiting": "never",
     "always_allow_tool_actions": true,
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
-    },
-    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
+    "default_profile": "write",
+    "model_parameters": []
   },
   "base_keymap": "JetBrains",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -55,7 +39,7 @@
     "light": "Ayu Light",
     "dark": "Ayu Dark"
   },
-  "auto_install_extension": {
+  "auto_install_extensions": {
     "html": true,
     "dockerfile": true,
     "docker-compose": true,
@@ -85,12 +69,8 @@
       "language_servers": ["basedpyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
+        { "code_action": "source.organizeImports.ruff" },
+        { "code_action": "source.fixAll.ruff" },
         {
           "language_server": {
             "name": "ruff"
@@ -104,20 +84,6 @@
       "initialization_options": {
         "experimentalFeatures": {
           "prefillRequiredFields": true
-        }
-      },
-      "rust-analyzer": {
-        "initialization_options": {
-          "inlayHints": {
-            "maxLength": null,
-            "lifetimeElisionHints": {
-              "enable": "skip_trivial",
-              "useParameterNames": true
-            },
-            "closureReturnTypeHints": {
-              "enable": "always"
-            }
-          }
         }
       }
     }

@@ -10,7 +10,3 @@ op completion fish | source  # 1Password CLI
 fish_add_path "$HOME/.local/bin"
 uv generate-shell-completion fish | source
 uvx --generate-shell-completion fish | source
-
-if test -f (brew --prefix)/etc/brew-wrap.fish
-  source (brew --prefix)/etc/brew-wrap.fish
-end
