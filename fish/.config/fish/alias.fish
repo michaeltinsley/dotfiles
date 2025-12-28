@@ -8,4 +8,4 @@ alias lt='ls --tree'
 
 # misc
 alias reload='exec fish'
-alias brew-backup="brew bundle dump --force --file=~/.config/Brewfile"
+alias brew-backup 'brew bundle dump --force --file=~/.config/brewfile/Brewfile.$MACHINE_TAG'
