@@ -32,7 +32,9 @@ if status is-interactive
     set -g fish_color_valid_path --underline
 
     starship init fish | source
-    op completion fish | source  # 1Password CLI
+    if command -q op
+        op completion fish | source  # 1Password CLI
+    end
 
     # uv
     fish_add_path "$HOME/.local/bin"
