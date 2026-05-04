@@ -34,6 +34,7 @@ if status is-interactive
     starship init fish | source
     if command -q op
         op completion fish | source  # 1Password CLI
+        source ~/.config/op/plugins.sh
     end
 
     # uv

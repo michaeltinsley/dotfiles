@@ -7,13 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "colorize_brackets": true,
   "helix_mode": false,
   "context_servers": {},
-  "features": {
-    "edit_prediction_provider": "copilot",
-  },
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
@@ -22,13 +32,16 @@
     "enabled_in_text_threads": true,
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "dock": "right",
     "notify_when_agent_waiting": "never",
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "model": "gpt-5-mini",
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "model_parameters": [],
   },
   "base_keymap": "JetBrains",
@@ -58,6 +71,9 @@
   },
   "load_direnv": "direct",
   "terminal": {
+    "shell": {
+      "program": "fish",
+    },
     "dock": "bottom",
     "blinking": "off",
     "detect_venv": {
