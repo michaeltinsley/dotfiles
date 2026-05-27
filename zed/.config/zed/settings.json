@@ -120,6 +120,12 @@
         },
       },
     },
+    "pyrefly": {
+      "binary": {
+        "path": "~/.local/bin/pyrefly",
+        "arguments": ["lsp"],
+      },
+    },
     "ty": {
       "settings": {
         "inlayHints": {
