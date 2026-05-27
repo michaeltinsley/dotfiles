@@ -7,17 +7,28 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "code_lens": "on",
+  "use_system_window_tabs": false,
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_status_icon": false,
+  },
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "entry_spacing": "comfortable",
+    "hide_root": false,
+    "diagnostic_badges": true,
+    "git_status_indicator": true,
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "colorize_brackets": true,
   "helix_mode": false,
@@ -29,17 +40,18 @@
       "proxy": null,
       "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": true,
   },
   "agent": {
+    "sidebar_side": "left",
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "dock": "right",
     "notify_when_agent_waiting": "never",
     "default_model": {
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "model": "claude-sonnet-4.5",
     },
     "default_profile": "write",
     "model_parameters": [],
@@ -84,7 +96,10 @@
   },
   "languages": {
     "Python": {
-      "language_servers": ["!pyrefly", "!zuban", "ty", "!basedpyright", "ruff"],
+      "inlay_hints": {
+        "enabled": true,
+      },
+      "language_servers": ["pyrefly", "!zuban", "!ty", "!basedpyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
