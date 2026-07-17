@@ -1,49 +1,98 @@
+tap "avelino/outl", "https://github.com/avelino/outl", trusted: true
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Command-line tool to interact with exercism.io
 brew "exercism"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
-brew "gemini-cli"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Post-modern modal text editor
 brew "helix"
+# Helps you navigate your file system faster by learning your habits
 brew "jump"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# NCurses Disk Usage
 brew "ncdu"
+# Fast Git hook manager written in Rust, drop-in alternative to pre-commit
 brew "prek"
+# Rust toolchain installer
 brew "rustup"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Markup-based typesetting system
 brew "typst"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
 cask "1password-cli"
+# Agent orchestration platform
 cask "antigravity"
+# Application uninstaller
 cask "appcleaner"
+# Desktop password and login vault
+cask "bitwarden"
+# Web browser focusing on privacy
+cask "brave-browser"
+# E-books management software
+cask "calibre"
+# App to write and organise your ideas
 cask "capacities"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Web browser focusing on privacy
 cask "duckduckgo"
 cask "font-fontawesome"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Desktop client for GitHub repositories
 cask "github"
+# Web browser
 cask "google-chrome"
+# Client for the Google Drive storage service
 cask "google-drive"
+# Chromium-based web browser
 cask "helium-browser"
+# Free and open-source media player
 cask "iina"
+# Cloud gaming platform
 cask "nvidia-geforce-now"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Music streaming service
 cask "spotify"
+# Mesh VPN based on WireGuard
 cask "tailscale-app"
-cask "tana"
+# To-do list
 cask "todoist-app"
+# Web browser focusing on security
 cask "tor-browser"
+# Open-source BitTorrent client
 cask "transmission"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# Multiplayer code editor
 cask "zed"
-cargo "rustlings"
+# Gecko based web browser
+cask "zen"
 uv "basedpyright"
 uv "commitizen"
 uv "pyrefly"
